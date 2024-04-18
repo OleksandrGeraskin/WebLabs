@@ -1,0 +1,101 @@
+<html>
+<head>
+    <title>Калькулятор</title>
+    <style>
+    .calculator {
+        margin: 50px auto;
+        width: 303px;
+        height: 490px;
+        border-radius: 15px;
+        background: #363636;
+        color: #fff;
+        font-family: Arial, sans-serif;
+    }
+    
+    .calcScreen {
+        height: 125px;
+        padding: 18px;
+        display: grid;
+        justify-items: end;
+        align-items: end;
+        margin-bottom: 25px;
+    }
+    
+    .calcScreen p {
+        text-align: right;
+        font-size: 4rem;
+        margin: 0;
+    }
+    
+    .buttons {
+        display: grid;
+        grid-template-areas:
+        "ac plus-minus percent division"
+        "seven eight nine multi"
+        "four five six minus"
+        "one two three plus"
+        "zero zero dot result";
+        grid-gap: 1px;
+        justify-items: center;
+    }
+    
+    .btn {
+        width: 75px;
+        height: 60px;
+        background: #737272;
+        text-align: center;
+        line-height: 3.7rem;
+        cursor: pointer;
+    }
+    
+    .btn.zero {
+        grid-area: zero;
+        width: 100%;
+        border-radius: 0 0 0 15px;
+    }
+
+    .btn.result {
+        border-radius: 0 0 15px 0;
+    }
+   
+    .btn.bg-grey {
+        background: #4e4c4c;
+    }
+
+    .btn.bg-orange {
+        background: #f29615;
+    }
+    </style>
+</head>
+<body>
+    <div class="calculator">
+        <div class="calcScreen">
+            <p>0</p>
+        </div>
+        <div class="buttons">
+            <div class="btn ac bg-grey">AC</div>
+            <div class="btn plus-minus bg-grey">&#177</div>
+            <div class="btn percent bg-grey">%</div>
+            <div class="btn division bg-orange">&divide</div>
+
+            <div class="btn seven">7</div>
+            <div class="btn eight">8</div>
+            <div class="btn nine">9</div>
+            <div class="btn multiply bg-orange">&#10005</div>
+
+            <div class="btn four">4</div>
+            <div class="btn five">5</div>
+            <div class="btn six">6</div>
+            <div class="btn minus bg-orange">-</div>
+
+            <div class="btn one">1</div>
+            <div class="btn two">2</div>
+            <div class="btn three">3</div>
+            <div class="btn plus bg-orange">+</div>
+
+            <div class="btn zero">0</div>
+            <div class="btn dot">,</div>
+            <div class="btn result bg-orange">=</div>
+    </div>
+</body>
+</html>

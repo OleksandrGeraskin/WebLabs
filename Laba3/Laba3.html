@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Форма за допомогою HTML</title>
+    <style>
+        form {
+            width: 500px;
+            border: 1px solid black;
+            padding: 2px;
+            font-family: Arial, sans-serif;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        td {
+            border: 1px solid black;
+            padding: 5px;
+            vertical-align: top;
+        }
+
+        label, input, select {
+            display: block;
+        }
+
+        input[type="text"], select, textarea {
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        input[type="submit"] {
+            margin-top: 10px;
+        }
+
+        .toppings {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .toppings div {
+            display: flex;
+            align-items: center;
+            margin-bottom: 5px;
+        }
+
+        .toppings label {
+            margin-left: 5px;
+        }
+
+        .extras {
+            display: flex;
+            align-items: center;
+        }
+
+        .extras div {
+            display: flex;
+            align-items: center;
+            margin-left: 15px;
+        }
+    </style>
+</head>
+<body>
+    <form>
+        <table>
+            <tr>
+                <td colspan="2" style="text-align: center;"><strong>Pizza Shop 2.0</strong></td>
+            </tr>
+            <tr>
+                <td><label for="name">Name</label></td>
+                <td><input type="text" name="name" placeholder="Enter your name" required></td>
+            </tr>
+            <tr>
+                <td><label>Pizza Topping</label></td>
+                <td class="toppings">
+                    <div>
+                        <input type="radio" id="supreme" name="topping" value="S" required />
+                        <label for="supreme">Supreme</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="vegetarian" name="topping" value="V" required />
+                        <label for="vegetarian">Vegetarian</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="hawaiian" name="topping" value="H" required />
+                        <label for="hawaiian">Hawaiian</label>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td><label for="sauce">Pizza Sauce</label></td>
+                <td>
+                    <select name="sauce">
+                        <option value="T">Tomato</option>
+                        <option value="Ch">Cheese</option>
+                        <option value="B">BBQ</option>
+                        <option value="Cr">Creamy</option>
+                        <option value="P">Pesto</option>
+                        <option value="-">No sauce</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td><label>Optional Extras</label></td>
+                <td class="extras">
+                    <div>
+                        <input type="checkbox" id="extraCheese" name="extras" value="C" />
+                        <label for="extraCheese">Extra Cheese</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="glutenFree" name="extras" value="G" />
+                        <label for="glutenFree">Gluten Free Base</label>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <label for="instructions">Delivery Instructions:</label>
+                    <textarea name="instructions" placeholder="Enter instructions if necessary" rows="4"></textarea>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <input type="submit" value="Send my Order" />
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>
